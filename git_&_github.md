@@ -65,6 +65,8 @@ To change the default branch on github, go to the repo on github.com, then Setti
 
 You may also need the `-f` flag if you have unmerged changes. It may also prompt you to use the `-D`. 
 
+`git checkout -b <my_new_branch> origin/master`--> will create the new branch and automatically have it set to pull from master
+
 ##Merging
 
 To merge, go into the branch you want to merge the other branch into, usually master...
