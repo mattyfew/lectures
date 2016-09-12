@@ -43,7 +43,7 @@ Be careful with working with branches though, this is where you will run into a 
 
 #####To make a new branch:
 
-`git checkout -b my new branch`
+`git checkout -b <my_new_branch>`
 
 ######To switch between branches
 
@@ -70,6 +70,7 @@ You may also need the `-f` flag if you have unmerged changes. It may also prompt
 To merge, go into the branch you want to merge the other branch into, usually master...
 
 `git checkout master`
+
 `git merge <other_branch>`
 
 Your changes will now be merged into the master branch!
