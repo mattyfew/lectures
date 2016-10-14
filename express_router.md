@@ -8,7 +8,7 @@ We will be talking about
 
 ## Express Router
 
-Express Router is like a mini-version of an express app, but it only handles routes.  It allows you to use all the routing APIs to configure your routes.
+Express Router is like a mini-version of an express app, but it only handles routes.  It allows you to use all the routing APIs to configure your routes. When you initially set up an Express app, it comes with a default router object - the one that we all have been using up to this point.  Express.Router() essentially sets up a **sub-router**. So you can create multiple sub-routers to handle different types of routes, depending on how you want to organize your app.
 
 To set it up, all you need is:
 
@@ -64,13 +64,13 @@ router.route('/profile')
     .post( (req,res)=>{
         var age = req.body.age,
             city = req.body.city,
-            homepageUrl = req.body.homepage_url
+            homepageUrl = req.body.homepage_url,
             userId = req.session.user.id;
 
         db.postUserProfile(age,city,homepageUrl,userId)
             .then(()=>{ res.redirect('/sign'); })
             .catch((err)=>{ console.log(err); })
-    });
+    })
 
 	.put( (req, res)=>{
    		 res.send('Update the profile!');
@@ -91,7 +91,7 @@ This a quick and easy way to organize your routes which use the same URL.
 
 
 
-## Modularizing Your Express App
+## Structuring your Express App
 
 Eventually, your Express apps will grow very large, to the point where you will have hundreds of lines of code in your server file.  If you haven't noticed by now, this can be a pain to maintain. So that's why it's a good idea to break off parts of your app into **modules**.  This is straightforward to do, and will allow you to better organize your quickly growing lines of code.
 
@@ -100,16 +100,17 @@ Here's a sample file structure that you could use:
 ```
 - app
     ----- models/
-    ------------- nerd.js
+    ------------- user.js
     ----- routes/
     ------------ routes.js
     ------config/
     -------------- db.js 
+    ----- views/  <!-- server-side views, such as templates -->
     ----- public/ <!-- all frontend, static content -->
     -------------- css/
     -------------- js/
     -------------- img/
-    -------------- views/
+    -------------- views/ <!-- client-side views -->
     -------------------- home.html
     -------------------- profile.html
     ----- index.html
