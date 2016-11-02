@@ -1,30 +1,22 @@
 # CSS Selectors & Filters
 
-CSS Selectors are patterns that are used to select HTML elements on the DOM that you want to style.
-
-
-
-Here is an "almanac" of all the [CSS selectors](https://css-tricks.com/almanac/selectors/).
-
-
+CSS Selectors are patterns that are used to select HTML elements in order to apply styles.  We can use different types of selectors to catch multiple elements that satisfy the selector's criteria.  This enables us to do cool stuff like style the odd `<li>` elements in a `<ul>`, or only apply styles to the last child of a div. There are many different combinations we can use to get the output we want.
 
 ## Selectors
 
-There are a lot of CSS selectors you can use, [here is a more complete list](http://www.w3schools.com/cssref/css_selectors.asp). These are the most common:
+CSS selectors use patterns to determine the element we want to select.  These are the most common:
 
 |      Element       |               What it does               |
 | :----------------: | :--------------------------------------: |
-|    div  .child     | selects any _.child_ element that is a descendant of any _div_ element |
-|    div > .child    | select any _.child_ element that is a child of any _div_ |
-|   div + .sibling   | selects any _.sibling_ element that is immediately preceded by a sibling _div_ element |
-| .mydiv:first-child | selects _.mydiv_ when it is the first child of its parent |
+|    div  .child     | selects all _.child_ elements that are descendants of any _div_ element |
+|    div > .child    | select all _.child_ elements where their parent is a *div* |
+|   div + .sibling   | selects all _.sibling_ elements that are immediately preceded by a sibling _div_ element |
+| .mydiv:first-child | selects every element with class *.mydiv* that is the first child of its parent |
 | section.this-class | selects any _section_ element with a class of  _.this-class_ |
 |     h1, h2, h3     |   selects all h1, h2, and h3 elements    |
-|       p ~ ul       | selects every _ul_ element that is preceded by a _p_ element |
+|       p ~ ul       | selects every _ul_ element that is preced by a _p_ element |
 
-
-
-
+There are a lot of CSS selectors you can use, [here is a more complete list](http://www.w3schools.com/cssref/css_selectors.asp).
 
 ## Pseudo Class Selectors
 
@@ -44,9 +36,34 @@ Pseudo classes are used as a way to be even *more* specific about the elements y
 
 
 
-## BONUS FEATURE: Filter!
+## BONUS FEATURE: CSS Filters!
+
+CSS filters are cool effects that you can put on images. These effects are similar to Instagram or Photoshop filters. You can add some interesting effects to the images on your web page very quickly and easily.
+
+```css
+.img-to-blur {
+  filter: blur(20px) sepia(1);
+}
+```
+
+Notice that you can use multiple filters in one line, but note that **order matters**.
+
+Here is a list of most of the filters availble to you. Unless otherwise specified, they accept a number (from 0 - 1) or a percentage (0% - 100%)
+
+- **blur() **- takes a length (in px)
+- **brightness()**
+- **contrast()**
+- **drop-shadow()** - takes a length (in px) and a color
+- **grayscale()**
+- **hue-rotate()** - takes angle. Max is 360deg.
+- **invert()**
+- **opacity()**
+- **saturate()**
+- **sepia()**
 
 
+
+## Exercises
 
 
 
