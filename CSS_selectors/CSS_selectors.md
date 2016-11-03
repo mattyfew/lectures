@@ -59,7 +59,7 @@ You can demo all the different filters [here](http://html5-demos.appspot.com/sta
 
 Here is a list of most of the filters availble to you. Unless otherwise specified, they accept a number or percentage.
 
-- **blur() **- takes a length (in px)
+- **blur()** - takes a length (in px)
 - **brightness()**
 - **contrast()**
 - **drop-shadow()** - takes a length (in px) and a color
