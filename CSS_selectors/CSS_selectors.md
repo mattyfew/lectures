@@ -8,7 +8,7 @@ CSS selectors use patterns to determine the element we want to select.  These ar
 
 
 
-|      Element       |               What it does               |
+|      Selector      |               What it does               |
 | :----------------: | :--------------------------------------: |
 |    div  .child     | selects all _.child_ elements that are descendants of any _div_ element |
 |    div > .child    | select all _.child_ elements where their parent is a *div* |
@@ -16,7 +16,7 @@ CSS selectors use patterns to determine the element we want to select.  These ar
 |       p ~ ul       | Selects an element (*ul*) that follows anywhere after the prior element (*p*), in which both elements share the same parent |
 | mydiv:first-child  | selects every element with class *.mydiv* that is the first child of its parent |
 | section.this-class | selects any _section_ element with a class of  _.this-class_ |
-|     h1, h2, h3     |   selects all h1, h2, and h3 elements    |
+|     h1, h2, h3     | selects all *h1*, *h2*, and *h3* elements |
 
 ## Pseudo Class Selectors
 
@@ -28,14 +28,19 @@ Pseudo classes are used as a way to be even *more* specific about the elements y
 
 ### The most common and useful pseudo selectors are:
 
+- **:link** - select links on the page.
+- **:visited** - selects all links that have been visited.
+- **:active** - selects all links and applies styles to them when they become active (ie. are clicked on).
 - **:hover** - use this to set styles for when the mouse hovers over an element. Easy way to really spice up your design.
 - **:first-child** - select the first child within a parent.
 - **:last-child** - select the last child within a parent.
 - **:nth-child(num)** - accepts an algebraic expression to specify the different ***child*** elements you want to select.  You can use this to only select the fifth child, or every odd or even element, or the first 5 child elements, and more!  [This article](https://css-tricks.com/how-nth-child-works/) talks about how `:nth-child` works and [this article](https://css-tricks.com/useful-nth-child-recipies/) goes over different formulas to use.
 - **:nth-of-type(num)** - accepts an algebraic expression to specify the different ***type*** of elements you want to select.  You can pass it a mathematical expression, the words `even` or `odd`. 
-- **:before** - allows you to insert content onto a page (from your CSS file) **before** an HTML element. The result is not actually on the DOM, but it appears as if it is. You need to include a *content* property
-- **:after** - allows you to insert content onto a page (from your CSS file) **after** an HTML element. The result is not actually on the DOM, but it appears as if it is. You need to include a *content* property
+- **:before** - allows you to insert content onto a page (from your CSS file) **before** an HTML element. The result is not actually on the DOM, but it appears as if it is. You need to include a *content* property.
+- **:after** - allows you to insert content onto a page (from your CSS file) **after** an HTML element. The result is not actually on the DOM, but it appears as if it is. You need to include a *content* property.
 
+
+Note - `:hover` MUST come after `:link` and `:visited` in the CSS definition in order to be effective! `:active` MUST come after `:hover` in the CSS definition in order to be effective! Pseudo-class names are not case-sensitive.
 
 
 ## BONUS FEATURE: CSS Filters!
