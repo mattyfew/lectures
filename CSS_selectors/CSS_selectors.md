@@ -6,15 +6,19 @@ CSS Selectors are patterns that are used to select HTML elements in order to app
 
 CSS selectors use patterns to determine the element we want to select.  These are the most common:
 
+
+
 |      Element       |               What it does               |
 | :----------------: | :--------------------------------------: |
 |    div  .child     | selects all _.child_ elements that are descendants of any _div_ element |
 |    div > .child    | select all _.child_ elements where their parent is a *div* |
-|   div + .sibling   | selects all _.sibling_ elements that are immediately preceded by a sibling _div_ element |
-| .mydiv:first-child | selects every element with class *.mydiv* that is the first child of its parent |
+|   div + .sibling   | Selects an element (.*sibling*) that follows directly after the prior element (*div*), in which both elements share the same parent |
+|       p ~ ul       | Selects an element (*ul*) that follows anywhere after the prior element (*p*), in which both elements share the same parent |
+| mydiv:first-child  | selects every element with class *.mydiv* that is the first child of its parent |
 | section.this-class | selects any _section_ element with a class of  _.this-class_ |
 |     h1, h2, h3     |   selects all h1, h2, and h3 elements    |
-|       p ~ ul       | selects every _ul_ element that is preced by a _p_ element |
+
+
 
 There are a lot of CSS selectors you can use, [here is a more complete list](http://www.w3schools.com/cssref/css_selectors.asp).
 
@@ -24,7 +28,7 @@ There are a lot of CSS selectors you can use, [here is a more complete list](htt
 
 Pseudo classes are used as a way to be even *more* specific about the elements you are trying to select. They stary with a colon, followed by the pseudo selector. Some also take an argument.
 
-[This article from CSS Tricks](https://css-tricks.com/pseudo-class-selectors/) details all of the different pseudo class selectors.
+[This article from CSS Tricks](https://css-tricks.com/pseudo-class-selectors/) details all of the different pseudo class selectors. Also check out this awesome [tester](https://css-tricks.com/examples/nth-child-tester/).
 
 ### The most common and useful pseudo selectors are:
 
@@ -33,6 +37,8 @@ Pseudo classes are used as a way to be even *more* specific about the elements y
 - **:last-child** - select the last child within a parent.
 - **:nth-child(num)** - accepts an algebraic expression to specify the different ***child*** elements you want to select.  You can use this to only select the fifth child, or every odd or even element, or the first 5 child elements, and more!  [This article](https://css-tricks.com/how-nth-child-works/) talks about how `:nth-child` works and [this article](https://css-tricks.com/useful-nth-child-recipies/) goes over different formulas to use.
 - **:nth-of-type(num)** - accepts an algebraic expression to specify the different ***type*** of elements you want to select.  You can pass it a mathematical expression, the words `even` or `odd`.  [Here's a more detailed article on :nth-of-type](https://css-tricks.com/almanac/selectors/n/nth-of-type/).
+- **:before** - allows you to insert content onto a page (from your CSS file) **before** an HTML element. The result is not actually on the DOM, but it appears as if it is. You need to include a *content* property
+- **:after** - allows you to insert content onto a page (from your CSS file) **after** an HTML element. The result is not actually on the DOM, but it appears as if it is. You need to include a *content* property
 
 
 

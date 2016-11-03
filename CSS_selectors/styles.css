@@ -1,0 +1,53 @@
+
+/*===============================================*/
+/*================ Selectors ====================*/
+/*===============================================*/
+body { font-family: Arial }
+hr {margin: 80px 0 }
+.first-div { background-color: red; height: 300px; width: 300px; }
+
+/* Descendent Selector ( ) - elects all .child elements that are descendants of any div element */
+.first-div section { background-color: yellow; }
+
+.first-div p { background-color: pink; }
+
+
+/* Direct Child selector (>) - only selects p elements that are immediate children of article */
+article.direct-child > p { color: green; }
+
+
+/* General Sibling selector (~) - selects all siblings of section */
+section.general-sibling-selector h2 ~ p { color: red; }
+
+
+/* Adjacent Sibling selector (+) - selects the sibling p that directly follows h1 */
+h2.adjacent-sib + p { font-size: 20px; color: blue }
+
+
+
+/*===============================================*/
+/*============= Pseudo Selectors ================*/
+/*===============================================*/
+
+h2.pseudo:hover { background-color: violet; }
+
+ul.pseudo-ul li:first-child {color: orange;}
+ul.pseudo-ul li:last-child {color: brown;}
+
+.pseudo-ul-2 li:nth-of-type(even) { background-color: purple;}
+.pseudo-ul-2 li:nth-of-type(odd) { background-color: blue;}
+.pseudo-ul-2 li:nth-child(4) { color: white}
+
+
+/* select all but the first 3 */
+/*.pseudo-ul-3 li:nth-child(n+3) { color: pink}*/
+
+/* select only the first 3*/
+/*.pseudo-ul-3 li:nth-child(-n+3) { color: pink}*/
+
+/* select every third, starting at the second */
+.pseudo-ul-3 li:nth-child(3n+2) { color: pink}
+
+
+/* :before and :after */
+.after:before { content: "hi"; color:red}
