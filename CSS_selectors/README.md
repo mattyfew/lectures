@@ -26,7 +26,7 @@ CSS selectors use patterns to determine the element we want to select.  These ar
 |         ```section.this-class```         | selects any _section_ element with a class of _.this-class_ |
 |             ```h1, h2, h3```             | selects all *h1*, *h2*, and *h3* elements |
 |        ```input[type=password]```        | selects all *input* elements that have a type equal to password |
-| ```a[href="https://spiced-academy.om"]``` | selects all *a* elements that have an href equal to https://spiced-academy.com |
+| ```a[href="https://spiced-academy.com"]``` | selects all *a* elements that have an href equal to https://spiced-academy.com |
 
 The last two selectors from this table are called **attribute selectors**. They scan the attributes of the element specified. You can learn more about attibute selectors [here](https://css-tricks.com/almanac/selectors/a/attribute/).
 
