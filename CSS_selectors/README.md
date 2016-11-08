@@ -17,7 +17,7 @@ CSS selectors use patterns to determine the element we want to select.  These ar
 
 |                 Selector                 |               What it does               |
 | :--------------------------------------: | :--------------------------------------: |
-|                    *                     |   Global styles, selects *everything*    |
+|                 ```*```                  |   Global styles, selects *everything*    |
 |            ```div  .child```             | selects all _.child_ elements that are descendants of any _div_ element |
 |            ```div > .child```            | select all _.child_ elements where their parent is a *div* |
 |           ```div + .sibling```           | Selects an element (.*sibling*) that follows directly after the prior element (*div*), in which both elements share the same parent |
