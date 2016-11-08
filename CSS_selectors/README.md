@@ -4,7 +4,7 @@ CSS has a lot of cool features that allow us to apply custom styles to specific 
 
 1. CSS Selectors
 2. Pseudo Class Selectors
-3. Tranform
+3. Transforms
 4. Transitions
 5. Animations
 6. Filters
