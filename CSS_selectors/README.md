@@ -1,4 +1,4 @@
-# CSS Selectors, Transform, Transitions, Animation, & Filters
+# CSS Selectors, Transforms, Transitions, Animation, & Filters
 
 CSS has a lot of cool features that allow us to apply custom styles to specific elements. In this lecture we will look at:
 
