@@ -1,4 +1,4 @@
-# Angular - Services, Directives,& UI Router
+# Angular - Services, Directives, & UI Router
 
 In this lecture we will discuss some more components of Angular.
 
