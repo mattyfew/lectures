@@ -1,0 +1,15 @@
+{
+  "name": "node_workshop",
+  "version": "1.0.0",
+  "description": "a quick workshop to get your website up and running in 20 minutes!",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node --harmony-async-await server"
+  },
+  "author": "Matt Fewer",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.14.0"
+  }
+}
