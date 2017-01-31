@@ -4,7 +4,7 @@
 
 
 
-I'm Matt Fewer, a teacher and developer here at <u>SPICED Academy</u>. We are a computer programming bootcamp specializing in teaching Full Stack Development with JavaScript and Node.js.  The courses we currently offer are:
+I'm Matt Fewer, a teacher and developer here at [SPICED Academy](https://www.spiced-academy.com/). We are a computer programming bootcamp specializing in teaching Full Stack Development with JavaScript and Node.js.  The courses we currently offer are:
 
 	1. Full Stack Web Development [full-time]
 	2. Front End Web Development [part-time]
@@ -28,7 +28,15 @@ From the Node.js wiki:
 
 > **Node.js** is an open-source, cross-platform, JavaScript runtime environment for developing a diverse variety of tools and applications. Although Node.js is not a JavaScript framework, many of its basic modules are written in JavaScript, and developers can write new modules in JavaScript.
 
+Woah, what does all of that mean?? I will explain...
 
+Traditional servers are thread based, meaning they run one line at a time. Node is event driven, meaning that we are able to run multiple processes at once, where one process won't hinder the other from running. Each process fires a **callback** when they are completed. This tells Node what to do after the process is finished running.
+
+Quoting [this article](https://objectpartners.com/2011/08/23/an-introduction-to-node-js/):
+
+>  [Tim Caswell and Dan York](http://code.danyork.com/2011/01/25/node-js-doctors-offices-and-fast-food-restaurants-understanding-event-driven-programming/) use the a doctor’s office reception line as an analogy to describe the difference between threaded and asynchronous systems. A traditional threaded model in a reception line would have you stand at the receptionist for as long as it takes you to complete your transaction. Even if you have multiple forms to fill out, you would stay at the window until they are all filled out. The only way to scale is to add more receptionists.
+>
+> In an event based system, the receptionist gives you the forms with a clipboard and pen and tells you to come back when you are done. The receptionist can then help the next person in line. When your forms are done, you get back in line. This system is already scalable. If the line gets to long, you can add more receptionists, but not at the rate you would need to in the “threaded” version.
 
 ## The steps
 
