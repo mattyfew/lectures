@@ -16,7 +16,7 @@ If you are interested in learning more information about <u>SPICED Academy</u>, 
 1. We will not spend any time installing/setting up the following. Links are provided for you to install on your own time.
    1. [Node.js](https://nodejs.org/en/) and [npm](https://www.npmjs.com/)
    2. A code editor such as [Atom](https://atom.io/) or [Brackets](http://brackets.io/)
-   3. If you have Windows, that you are able to run [Bash](https://msdn.microsoft.com/en-us/commandline/wsl/about) in the terminal (Mac people, it's already installed)
+   3. If you have Windows, that you are able to run [Bash](https://msdn.microsoft.com/en-us/commandline/wsl/about) in the terminal (Mac & Linux people, it's already installed)
    4. [Now](https://zeit.co/now) - provides realtime global deployment for free
 2. Q & A - I will take questions as I go through the demo. If need be, we will "parking lot" certain questions to be discussed at the conclusion of the demo.
 
@@ -40,3 +40,9 @@ From the Node.js wiki:
 6. Deploy using Now.
 7. Go brag to all your friend, your website is now live on the internet! 
 
+
+
+
+
+
+![do a dance](./success.gif)
