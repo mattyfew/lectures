@@ -28,17 +28,19 @@ From the Node.js wiki:
 
 > **Node.js** is an open-source, cross-platform, JavaScript runtime environment for developing a diverse variety of tools and applications. Although Node.js is not a JavaScript framework, many of its basic modules are written in JavaScript, and developers can write new modules in JavaScript.
 
+
+
 ## The steps
 
-1. Create our project directory and all the files we will need.
+1. Create your project directory and all the files we will need.
    1. `index.html` & `server.js`
 2. `npm init` your directory
    1. Go into `package.json`, change the start script to `"start": "node --harmony-async-await server"`
 3. Create your server.
 4. Create your html file.
 5. Style it.
-6. Deploy using Now.
-7. Go brag to all your friend, your website is now live on the internet! 
+6. Deploy using **Now**.
+7. Go brag to all your friends, your website is now live on the internet! 
 
 
 
