@@ -1,12 +1,8 @@
 "use strict";
 
-var TestApp = angular.module("TestApp", ["app.routes", "app.nav", "app.factory.articles"])
+var TestApp = angular.module("TestApp", ["app.routes", "app.nav", "app.service.articles"])
 
 .controller('MainCtrl', function($scope, $state, $http, serviceHttp){
-    // $http.get("http://localhost:8080/articles").then(function(res){
-    //     console.log(res.data);
-    //     $scope.articles = res.data;
-    // })
 
     serviceHttp.getArticles().then(function(result){
         $scope.articles = result.data;

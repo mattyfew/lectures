@@ -7,7 +7,7 @@
     </head>
     <body>
 
-        <h2>Descendent Selector</h2>
+        <h2>Descendent Selector - " "</h2>
         <div class="first-div">
             <div class="second-div">
                 <p>We are inside the second div</p>
@@ -22,12 +22,14 @@
 
 
 
-        <h2>Direct Child Selector</h2>
+        <h2>Direct Child Selector - ></h2>
         <article class="direct-child">
             <p>This paragraph will be selected</p>
             <div>
                 <p>...the inner p tag</p>
             </div>
+						<p>This paragraph will be selected</p>
+
         </article>
 
 
@@ -36,24 +38,7 @@
 
 
 
-        <h2>General Sibling Selector</h2>
-        <section class="general-sibling-selector">
-            <p>p tag one</p>
-            <h2>this is our h2</h2>
-            <p>This paragraph will be selected</p>
-            <div>
-                <p>p tag two</p>
-            </div>
-            <p>This paragraph will be selected</p>
-        </section>
-
-
-
-        <hr>
-
-
-
-        <h2>Adjacent Sibling Selector</h2>
+        <h2>Adjacent Sibling Selector - +</h2>
         <p>...</p>
         <section>
             <p>One p tag</p>
@@ -66,12 +51,30 @@
         </section>
 
 
+
+        <hr>
+
+
+
+        <h2>General Sibling Selector - ~</h2>
+        <section class="general-sibling-selector">
+            <p>p tag one</p>
+            <h2>this is our h2</h2>
+            <p>This paragraph will be selected</p>
+            <div>
+                <p>p tag two</p>
+            </div>
+            <p>This paragraph will be selected</p>
+        </section>
+
+
+       
         <hr>
 
 
         <!-- ******** PSEUDO SELECTORS ************ -->
 
-        <h2 class="pseudo">Time for Pseudo Classes</h2>
+        <h2 class="pseudo">Time for Pseudo Classes!</h2>
 
         <ul class="pseudo-ul">
             <li>first</li>

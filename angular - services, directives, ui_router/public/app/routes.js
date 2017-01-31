@@ -26,9 +26,13 @@ angular.module('app.routes', ['ui.router'])
                 'main': {
                     templateUrl: 'app/views/about.html'
                 },
-                'footer': {
-                    templateUrl: 'app/views/templates/footer.html'
+                '@about': {
+                    template: "<p>I targeted the unnamed view in about.html</p>"
                 }
+                // ,
+                // 'footer': {
+                //     templateUrl: 'app/views/templates/footer.html'
+                // }
             }
         })
 

@@ -7,22 +7,21 @@ h1 {text-align: center; text-decoration: underline;}
 
 #link { max-width: 370px; }
 .animate-link {
-    /*transform: translateX(200px); */
-    /*transform: translate(200px, 100px);*/
-    /*transform: skew(60deg)*/
-    transform: translate(200px, 50px) scale(1.5);
-    /*transform: rotate(130deg);*/
+/*    transform: translateX(200px); */
+/*    transform: translate(200px, 100px);*/
+/*    transform: skew(60deg)*/
+/*    transform: translate(200px, 50px) scale(1.5);*/
+    transform: rotate(130deg);
 }
 
 
 
 #earthbound {
-    width: 800px;
-    transition: opacity 2s ease-in-out;
+    height: 500px;
+    transition: opacity 5s ease-in-out;
 }
 .animate-earthbound {
     opacity: 0;
-    width: 100px;
 }
 
 

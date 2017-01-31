@@ -1,9 +1,13 @@
 # Building a website with Node.js in 20 minutes!
 
+![img](http://assets.codebar.io/b//uploads/sponsor/avatar/250/Spiced_Logo.png)
+
+
+
 I'm Matt Fewer, a teacher and developer here at <u>SPICED Academy</u>. We are a computer programming bootcamp specializing in teaching Full Stack Development with JavaScript and Node.js.  The courses we currently offer are:
 
-	1. **Full Stack Web Development** [full-time]
-	2. **Front End Web Development** [part-time]
+	1. Full Stack Web Development [full-time]
+	2. Front End Web Development [part-time]
 
 If you are interested in learning more information about <u>SPICED Academy</u>, you can reach out to Shilpa (shilpa@spiced-academy.com) or myself (matt@spiced-academy.com).
 
