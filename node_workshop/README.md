@@ -22,6 +22,8 @@ If you are interested in learning more information about <u>SPICED Academy</u>, 
 
 ## Let's talk about Node.js
 
+![Node](https://dab1nmslvvntp.cloudfront.net/wp-content/uploads/2015/07/1436439824nodejs-logo.png)
+
 From the Node.js wiki:
 
 > **Node.js** is an open-source, cross-platform, JavaScript runtime environment for developing a diverse variety of tools and applications. Although Node.js is not a JavaScript framework, many of its basic modules are written in JavaScript, and developers can write new modules in JavaScript.
