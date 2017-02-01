@@ -36,7 +36,7 @@ Quoting [this article](https://objectpartners.com/2011/08/23/an-introduction-to-
 
 >  [Tim Caswell and Dan York](http://code.danyork.com/2011/01/25/node-js-doctors-offices-and-fast-food-restaurants-understanding-event-driven-programming/) use the a doctor’s office reception line as an analogy to describe the difference between threaded and asynchronous systems. A traditional threaded model in a reception line would have you stand at the receptionist for as long as it takes you to complete your transaction. Even if you have multiple forms to fill out, you would stay at the window until they are all filled out. The only way to scale is to add more receptionists.
 >
-> In an event based system, the receptionist gives you the forms with a clipboard and pen and tells you to come back when you are done. The receptionist can then help the next person in line. When your forms are done, you get back in line. This system is already scalable. If the line gets to long, you can add more receptionists, but not at the rate you would need to in the “threaded” version.
+>  In an event based system, the receptionist gives you the forms with a clipboard and pen and tells you to come back when you are done. The receptionist can then help the next person in line. When your forms are done, you get back in line. This system is already scalable. If the line gets to long, you can add more receptionists, but not at the rate you would need to in the “threaded” version.
 
 ## The steps
 
@@ -44,11 +44,12 @@ Quoting [this article](https://objectpartners.com/2011/08/23/an-introduction-to-
    1. `index.html` & `server.js`
 2. `npm init` your directory
    1. Go into `package.json`, change the start script to `"start": "node --harmony-async-await server"`
-3. Create your server.
-4. Create your html file.
-5. Style it.
-6. Deploy using **Now**.
-7. Go brag to all your friends, your website is now live on the internet! 
+3. `npm install —save express`
+4. Create your server.
+5. Create your html file.
+6. Style it.
+7. Deploy using **Now**.
+8. Go brag to all your friends, your website is now live on the internet! 
 
 
 
