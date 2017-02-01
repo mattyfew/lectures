@@ -30,7 +30,7 @@ From the Node.js wiki:
 
 Woah, what does all of that mean?? I will explain...
 
-Traditional servers are thread based, meaning they run one line at a time. Node is event driven, meaning that we are able to run multiple processes at once, where one process won't hinder the other from running. Each process fires a **callback** when they are completed. This tells Node what to do after the process is finished running.
+##### Traditional servers are thread based, meaning they run one line at a time. Node is event driven, meaning that we are able to run multiple processes at once, where one process won't hinder the other from running. Each process fires a **callback** when they are completed. This tells Node what to do after the process is finished running.
 
 Quoting [this article](https://objectpartners.com/2011/08/23/an-introduction-to-node-js/):
 
