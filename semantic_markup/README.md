@@ -1,4 +1,4 @@
-# HTML5 Tags
+# Semantic Markup
 
 ![html5](https://www.w3.org/html/logo/downloads/HTML5_Badge_256.png)
 
