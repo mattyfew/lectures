@@ -1,5 +1,7 @@
 # Rendering 3D Graphics with Three.js
 
+![earth](https://media.giphy.com/media/ypytHBV0nRDbO/giphy.gif)
+
 Three.js is a cross-browser JavaScript library/API used to create and display animated 3D computer graphics on a web browser. Three.js scripts may be used in conjunction with the HTML5 canvas element, SVG or [WebGL](https://en.wikipedia.org/wiki/WebGL).
 
 You should definitely checkout the [Three.js website](https://threejs.org/) and look at some of the amazing examples.
@@ -55,7 +57,7 @@ First we create a new scene.  Next, we create a *camera*.  Three.js has a few ca
 
 `PerpectiveCamera(fov, aspect, near, far)`
 
-These parameters make up the [viewing frustum](https://en.wikipedia.org/wiki/Viewing_frustum) of a camera.
+These parameters make up the [viewing frustum](https://en.wikipedia.org/wiki/Viewing_frustum) of a camera. More info on this can be found in the [Three.js docs](https://threejs.org/docs/index.html#api/cameras/PerspectiveCamera).
 
 The *renderer* is used to display our beautifully crafted scenes using WebGL.
 
@@ -125,9 +127,17 @@ render()
 Now we can see our planet earth rotating, but the background is black and boring.  Let's add a skybox.  Basically, a skybox is a BIG cube inside of which we place our meshes.  We give the *inside* of each side of the cube a texture.
 
 ```javascript
-var imagePrefix = "./img/";
-var urls = [ 'space.jpg', 'space.jpg', 'space.jpg', 'space.jpg', 'space.jpg', 'space.jpg' ];
-var skyBox = new THREE.CubeTextureLoader().setPath(imagePrefix).load(urls);
-scene.background = skyBox;
+var imagePrefix = "./img/"
+var urls = [ 'space.jpg', 'space.jpg', 'space.jpg', 'space.jpg', 'space.jpg', 'space.jpg' ]
+var skyBox = new THREE.CubeTextureLoader().setPath(imagePrefix).load(urls)
+scene.background = skyBox
 ```
 
+With that, we now have our earth mesh rotating on its axes in outer space!
+
+![threejs_scene](./public/img/threejs_screenshot.png)
+
+# Exercises
+
+1. Create a new scene, along with its lights, cameras, and controls.  Then create 3 different types of meshes, each with a different geometry ([list here](https://threejs.org/docs/index.html)). Place the meshes at different coordinates so that they are all visible.  Experiment with different materials and skins.
+2. Bonus: Use the [TextGeometry](https://threejs.org/docs/index.html#api/geometries/TextGeometry) to add text to your 3D scene.  The JSON file(s) you will need to load the fonts can be found [here](https://github.com/mrdoob/three.js/tree/dev/examples/fonts).
