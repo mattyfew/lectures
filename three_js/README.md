@@ -93,9 +93,9 @@ In summary, we create a new geometry and material. We then use these to create a
 
 ### OrbitControls
 
-Three.js has several very cool [control types](https://github.com/mrdoob/three.js/tree/dev/examples/js/controls), offering various ways to interact with the scene.  Examples include *FirstPersonControls* (like a first-person shooter game) and *FlyControls* (fly around the scene like Superman).  We will use **OrbitControls**, which allows us to drag and move around our planet. These controls take the camera and element being rendered as arguments.
+Three.js has several very cool control types offering various ways to interact with the scene.  Examples include *FirstPersonControls* (like a first-person shooter game) and *FlyControls* (fly around the scene like Superman).  We will use **OrbitControls**, which allows us to drag and move around our planet. These controls take the camera and element being rendered as arguments.
 
-OrbitControls does not come baked into Three.js. We must include it in our index.html:
+OrbitControls does not come baked into Three.js.  The separate files can be found in the [Three.js repo](https://github.com/mrdoob/three.js/tree/dev/examples/js/controls).  We must include it in our project directory, then include it in our index.html:
 
 ```html
 <script src="./OrbitControls.js"></script>
