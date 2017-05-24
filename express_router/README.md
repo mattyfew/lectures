@@ -113,7 +113,7 @@ Here's a sample file structure that you could use:
     -------------- views/ <!-- client-side views -->
     -------------------- home.html
     -------------------- profile.html
-    ----- index.html
+    ---------------index.html
     - package.json
     - server.js
     - node_modules/
