@@ -11,14 +11,14 @@ h1 {text-align: center; text-decoration: underline;}
 /*    transform: translate(200px, 100px);*/
 /*    transform: skew(60deg)*/
 /*    transform: translate(200px, 50px) scale(1.5);*/
-/*    transform: rotate(130deg);*/
+    transform: rotate(130deg);
 }
 
 
 
 #earthbound {
     height: 500px;
-    transition: opacity 5s ease-in-out;
+    transition: opacity 4s linear;
 }
 .animate-earthbound {
     opacity: 0;

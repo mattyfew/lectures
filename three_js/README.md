@@ -8,7 +8,7 @@ You should definitely checkout the [Three.js website](https://threejs.org/) and 
 
 ## Creating a Scene
 
-In order to get started created anything with Three.js, we are going to need a few things:
+In order to get started creating anything with Three.js, we are going to need a few things:
 
 1. **Scene** - the 3 dimensional space that you will be working with.
 2. **Camera** - represents the user vantage point. There are several types of cameras in Three.js.
@@ -87,13 +87,13 @@ Most meshes in Three.js are made up of a geometry and a material. The *geometry*
 
 Three.js has several built-in geometries, including ConeGeometry, CircleGeometry, RingGeometry, PolyhedronGeometry, etc. We use the **SphereGeometry** because planet earth is a sphere.  The 3 arguments it takes are the radius, widthSegments, and heightSegments.  
 
-From there we use the **PhongMaterial**, which is a special material that gives our mesh a shiny finish. Note there are plenty of other material options, check the [docs](https://threejs.org/docs/index.html) for a full list.  Then, using **TextureLoader**, we load a skin of planet earth and map that to our material.
+From there we use the **PhongMaterial**, which is a special material that gives our mesh a shiny finish. Note there are plenty of other material options, check the [docs](https://threejs.org/docs/index.html) for a full list.  Using **TextureLoader**, we load a skin of planet earth and map that to our material.
 
 In summary, we create a new geometry and material. We then use these to create a new mesh. Lastly, we add our earthMesh to our scene.
 
 ### OrbitControls
 
-Three.js has several very cool control types offering various ways to interact with the scene.  Examples include *FirstPersonControls* (like a first-person shooter game) and *FlyControls* (fly around the scene like Superman).  We will use **OrbitControls**, which allows us to drag and move around our planet. These controls take the camera and element being rendered as arguments.
+Three.js has several very cool control types offering various ways to interact with the scene.  Examples include *FirstPersonControls* (like a first-person shooter game) and *FlyControls* (fly around the scene like Superman).  We will use **OrbitControls**, which allows us to drag and move around the camera (not the planet!) as we *orbit* around our planet. These controls take the camera and element being rendered as arguments.
 
 OrbitControls does not come baked into Three.js.  The separate files can be found in the [Three.js repo](https://github.com/mrdoob/three.js/tree/dev/examples/js/controls).  We must include it in our project directory, then include it in our index.html:
 
@@ -135,9 +135,14 @@ scene.background = skyBox
 
 With that, we now have our earth mesh rotating on its axes in outer space!
 
-![threejs_scene](./public/img/threejs_screenshot.png)
+![threejs_scene](./assets/threejs_screenshot.png)
 
 # Exercises
 
 1. Create a new scene, along with its lights, cameras, and controls.  Then create 3 different types of meshes, each with a different geometry ([list here](https://threejs.org/docs/index.html)). Place the meshes at different coordinates so that they are all visible.  Experiment with different materials and skins.
 2. Bonus: Use the [TextGeometry](https://threejs.org/docs/index.html#api/geometries/TextGeometry) to add text to your 3D scene.  The JSON file(s) you will need to load the fonts can be found [here](https://github.com/mrdoob/three.js/tree/dev/examples/fonts).
+
+## Additional References
+
+1. [How to check if WebGL is supported on your device and/or browser](https://threejs.org/docs/index.html#manual/introduction/WebGL-compatibility-check)
+

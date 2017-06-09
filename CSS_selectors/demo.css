@@ -25,6 +25,7 @@ section.general-sibling-selector h2 ~ p { color: red; }
 
 
 
+
 /*===============================================*/
 /*============= Pseudo Selectors ================*/
 /*===============================================*/
@@ -46,11 +47,11 @@ ul.pseudo-ul li:last-child {color: green; }
 /*.pseudo-ul-3 li:nth-child(-n+3) { color: pink; }*/
 
 /* select every third, starting at the second */
-.pseudo-ul-3 li:nth-child(3n+2) { color: pink }
+/*.pseudo-ul-3 li:nth-child(3n+2) { color: pink }*/
 
 
 /* :before and :after */
-/*.after:before { content: "hi"; color:red; }*/
+.after:before { content: "hi"; color:red; }
 
 .after + a:after { content: " [" attr(href) "]"; }
 
@@ -60,7 +61,7 @@ ul.pseudo-ul li:last-child {color: green; }
 
 /*#cloud {filter: blur(5px)}*/
 /*#cloud {filter: brightness(2)}*/
-/*#cloud {filter: sepia(1)}*/
+/*#cloud {filter: sepia(3)}*/
 /*#cloud {filter: saturate(4)}*/
 /*#cloud {filter: drop-shadow(0px 0px 20px blue)}*/
-/*#cloud {filter: blur(2px) sepia(1) brightness(2) }*/
+#cloud {filter: blur(2px) sepia(2) brightness(2) }
