@@ -62,12 +62,42 @@ var orbit = new THREE.OrbitControls(camera, renderer.domElement)
 
 
 
+// =========== SKYBOX =============
+
+var imagePrefix = "/public/assets/"
+var urls = [ 'space.jpg', 'space.jpg', 'space.jpg', 'space.jpg', 'space.jpg', 'space.jpg' ]
+var skyBox = new THREE.CubeTextureLoader().setPath(imagePrefix).load(urls)
+scene.background = skyBox
+
+
+
+
+
+// =========== DAT.GUI =============
+
+var controls = new function() {
+    this.guiRotationX = 0.005;
+    this.guiRotationY = 0.005;
+}
+
+var gui = new dat.GUI();
+gui.add(controls, 'guiRotationX', 0, .2);
+gui.add(controls, 'guiRotationY', 0, .2);
+
+
+
+
+
 // =========== RENDER =============
 
 var render = function() {
     requestAnimationFrame(render)
-    earthMesh.rotation.x += 0.005
-    earthMesh.rotation.y += 0.005
+    // earthMesh.rotation.x += 0.005
+    // earthMesh.rotation.y += 0.005
+
+    earthMesh.rotation.x += controls.guiRotationX
+    earthMesh.rotation.y += controls.guiRotationY
+
     renderer.render(scene, camera)
 }
 render()
@@ -75,12 +105,9 @@ render()
 
 
 
-// =========== SKYBOX =============
 
-var imagePrefix = "/public/assets/"
-var urls = [ 'space.jpg', 'space.jpg', 'space.jpg', 'space.jpg', 'space.jpg', 'space.jpg' ]
-var skyBox = new THREE.CubeTextureLoader().setPath(imagePrefix).load(urls)
-scene.background = skyBox
+
+
 
 
 
