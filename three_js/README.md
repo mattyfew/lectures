@@ -33,8 +33,7 @@ Ok let's get started! Our HTML will be very simple. Notice we are loading Three.
 		</style>
 	</head>
 	<body>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/85/three.min.js"></script>
-         <script src="./script.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/85/three.min.js"></script>			<script src="./script.js"></script>
 	</body>
 </html>
 ```
@@ -95,7 +94,7 @@ In summary, we create a new geometry and material. We then use these to create a
 
 Three.js has several very cool control types offering various ways to interact with the scene.  Examples include *FirstPersonControls* (like a first-person shooter game) and *FlyControls* (fly around the scene like Superman).  We will use **OrbitControls**, which allows us to drag and move around the camera (not the planet!) as we *orbit* around our planet. These controls take the camera and element being rendered as arguments.
 
-OrbitControls does not come baked into Three.js.  The separate files can be found in the [Three.js repo](https://github.com/mrdoob/three.js/tree/dev/examples/js/controls).  We must include it in our project directory, then include it in our index.html:
+OrbitControls does not come baked into Three.js.  The separate files can be found in the [Three.js repo](https://github.com/mrdoob/three.js/tree/dev/examples/js/controls) (I've added OrbitControls to the `assets` folder of this repo).  We must include it in our project directory, then include the script in our index.html:
 
 ```html
 <script src="./OrbitControls.js"></script>
@@ -140,9 +139,10 @@ With that, we now have our earth mesh rotating on its axes in outer space!
 # Exercises
 
 1. Create a new scene, along with its lights, cameras, and controls.  Then create 3 different types of meshes, each with a different geometry ([list here](https://threejs.org/docs/index.html)). Place the meshes at different coordinates so that they are all visible.  Experiment with different materials and skins.
-2. Bonus: Use the [TextGeometry](https://threejs.org/docs/index.html#api/geometries/TextGeometry) to add text to your 3D scene.  The JSON file(s) you will need to load the fonts can be found [here](https://github.com/mrdoob/three.js/tree/dev/examples/fonts).
+2. **Bonus:** Use the [TextGeometry](https://threejs.org/docs/index.html#api/geometries/TextGeometry) to add text to your 3D scene.  Don't forget to also create a material along with it to create your mesh.  The JSON file(s) you will need to load the fonts can be found [here](https://github.com/mrdoob/three.js/tree/dev/examples/fonts) (I've also added them to the `assets` directory of this repo to save you some time).
 
 ## Additional References
 
-1. [How to check if WebGL is supported on your device and/or browser](https://threejs.org/docs/index.html#manual/introduction/WebGL-compatibility-check)
+1. [Three.js Docs](https://threejs.org/docs/index.html)
+2. [How to check if WebGL is supported on your device and/or browser](https://threejs.org/docs/index.html#manual/introduction/WebGL-compatibility-check)
 
