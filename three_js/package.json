@@ -1,5 +1,5 @@
 {
-  "name": "three",
+  "name": "threejs",
   "version": "1.0.0",
   "description": "Three.js is a cross-browser JavaScript library/API used to create and display animated 3D computer graphics on a web browser. Three.js scripts may be used in conjunction with the HTML5 canvas element, SVG or [WebGL](https://en.wikipedia.org/wiki/WebGL).",
   "main": "server.js",
@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
   },
-  "author": "",
+  "author": "Matt Fewer",
   "license": "ISC",
   "dependencies": {
     "express": "^4.15.2"
