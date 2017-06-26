@@ -64,7 +64,7 @@ document.body.appendChild(renderer.domElement)
 
 // =========== DIRECTIONAL LIGHTS =============
 
-// var pointColor = "#CAE32D";
+// var pointColor = "#CF2DE3";
 var directionalLight = new THREE.DirectionalLight();
 directionalLight.position.set(0, 0,  40);
 directionalLight.intensity = 0.8;

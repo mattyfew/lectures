@@ -15,7 +15,7 @@ In order to get started creating anything with Three.js, we are going to need a 
 3. **Light** - our scene needs a light source, otherwise everything will be "dark" and you won't be able to see anything.
 4. **Mesh** - a mesh is a 3D object we create. This can be a cube, planet, character, tree, literally anything!
 5. **Controls** - how the user can interact with the scene.
-6. **Renderer** - the function which renders our scene. 
+6. **Renderer** - the function which renders our scene.
 
 ## Let's create a new Planet Earth!
 
@@ -76,7 +76,7 @@ Let's write the code to create our planet mesh.
 ```javascript
 var geometry = new THREE.SphereGeometry( 10, 32, 32 )
 var material = new THREE.MeshPhongMaterial()
-material.map = new THREE.TextureLoader().load('./img/earthmap4k.jpg')
+material.map = new THREE.TextureLoader().load('/path/to/img/earthmap4k.jpg')
 var earthMesh = new THREE.Mesh( geometry, material )
 
 scene.add( earthMesh )
@@ -126,7 +126,7 @@ render()
 Now we can see our planet earth rotating, but the background is black and boring.  Let's add a skybox.  Basically, a skybox is a BIG cube inside of which we place our meshes.  We give the *inside* of each side of the cube a texture.
 
 ```javascript
-var imagePrefix = "./img/"
+var imagePrefix = "/path/to/img/"
 var urls = [ 'space.jpg', 'space.jpg', 'space.jpg', 'space.jpg', 'space.jpg', 'space.jpg' ]
 var skyBox = new THREE.CubeTextureLoader().setPath(imagePrefix).load(urls)
 scene.background = skyBox
@@ -145,4 +145,3 @@ With that, we now have our earth mesh rotating on its axes in outer space!
 
 1. [Three.js Docs](https://threejs.org/docs/index.html)
 2. [How to check if WebGL is supported on your device and/or browser](https://threejs.org/docs/index.html#manual/introduction/WebGL-compatibility-check)
-
