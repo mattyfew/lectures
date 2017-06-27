@@ -33,7 +33,7 @@ Ok let's get started! Our HTML will be very simple. Notice we are loading Three.
 		</style>
 	</head>
 	<body>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/85/three.min.js"></script>			<script src="./script.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/85/three.min.js"></script>			<script src="/path/to/script.js"></script>
 	</body>
 </html>
 ```
@@ -97,7 +97,7 @@ Three.js has several very cool control types offering various ways to interact w
 OrbitControls does not come baked into Three.js.  The separate files can be found in the [Three.js repo](https://github.com/mrdoob/three.js/tree/dev/examples/js/controls) (I've added OrbitControls to the `assets` folder of this repo).  We must include it in our project directory, then include the script in our index.html:
 
 ```html
-<script src="./OrbitControls.js"></script>
+<script src="/path/to/OrbitControls.js"></script>
 ```
 
 Then we add to our script file:
@@ -121,7 +121,7 @@ var render = function() {
 render()
 ```
 
-### Bonus: Adding a Skybox
+### Adding a Skybox
 
 Now we can see our planet earth rotating, but the background is black and boring.  Let's add a skybox.  Basically, a skybox is a BIG cube inside of which we place our meshes.  We give the *inside* of each side of the cube a texture.
 
@@ -135,6 +135,55 @@ scene.background = skyBox
 With that, we now have our earth mesh rotating on its axes in outer space!
 
 ![threejs_scene](./assets/threejs_screenshot.png)
+
+## Bonus: dat.GUI
+
+dat.GUI is a lightweight graphical user interface for changing variables in JavaScript.  It plays very nicely with Three.js as it allows us to manipulate almost any value in our scene.  This is great for development.
+
+We need to do some refactoring in order to get dat.GUI working.
+
+First we need to include the file in our project, since it does not come natively inside of Three.js.
+
+```html
+<script src="https://cdnjs.cloudflare.com/ajax/libs/dat-gui/0.6.5/dat.gui.min.js"></script>
+```
+
+Now, we need to create a controls constructor. This constructor is where we set our initial values.
+
+```javascript
+var controls = new function() {
+    this.textColor = 0xffae23
+    this.guiRotationX = 0.005
+    this.guiRotationY = 0.005
+}
+```
+
+Next we must create a new instance of `dat.GUI()`, then we map the controls constructor property to the `gui` variable. 
+
+```javascript
+var gui = new dat.GUI()
+gui.add(controls, 'guiRotationX', 0, .2)
+gui.add(controls, 'guiRotationY', 0, .2)
+
+gui.addColor(controls, 'textColor').onChange(function (e) {
+    textMesh.material.color = new THREE.Color(e)
+})
+```
+
+We also set a range for each control. For example, `guiRotationX` can be set to 0, all the up to .2, and everywhere in between those two values.
+
+If we want to manipulate colors we set, we must take a slightly different approach.  We must chain an `onChange` method. Inside it, we map a specific mesh's color to the new color.
+
+Inside of our render method, we must refactor our earthMesh rotations to the following:
+
+```javascript
+earthMesh.rotation.x += controls.guiRotationX
+earthMesh.rotation.y += controls.guiRotationY
+```
+
+We should now see a control box on the top right of our window. We can now control the earthMesh's rotation as well as a mesh's color!
+
+![dat.GUI](./assets/dat.GUI.png)
 
 # Exercises
 
