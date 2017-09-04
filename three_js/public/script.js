@@ -1,5 +1,7 @@
-var textMesh, cubeMesh
+var textMesh, cubeMesh, moonMesh, moonPivot, earthMesh;
 var textColor = "#ffae23"
+
+Math.radians = function(degrees) {return degrees * Math.PI / 180;};
 
 
 
@@ -10,7 +12,7 @@ var textColor = "#ffae23"
 var loader = new THREE.FontLoader();
 
 loader.load( '/public/assets/fonts/optimer_regular.typeface.json', function ( font ) {
-    var textGeometry = new THREE.TextGeometry( 'Hello Wasabi', {
+    var textGeometry = new THREE.TextGeometry( 'Hello Ginger', {
         font: font,
         size: 6,
         height: 3,
@@ -64,7 +66,7 @@ document.body.appendChild(renderer.domElement)
 
 // =========== DIRECTIONAL LIGHTS =============
 
-// var pointColor = "#CF2DE3";
+var pointColor = "#2DE3A2";
 var directionalLight = new THREE.DirectionalLight();
 directionalLight.position.set(0, 0,  40);
 directionalLight.intensity = 0.8;
@@ -80,14 +82,33 @@ scene.add(backDirectionalLight);
 
 
 
-// =========== EARTHMESH =============
+// =========== EARTH MESH =============
 
+var loader = new THREE.TextureLoader()
 var geometry = new THREE.SphereGeometry( 10, 32, 32 )
 var material = new THREE.MeshPhongMaterial()
-material.map = new THREE.TextureLoader().load('/public/assets/earthmap4k.jpg')
-var earthMesh = new THREE.Mesh( geometry, material )
+material.map = loader.load('./public/assets/earthmap4k.jpg')
+earthMesh = new THREE.Mesh( geometry, material )
 
 scene.add( earthMesh )
+
+
+
+// =========== MOON MESH ==============
+createMoonMeshAndPivot()
+function createMoonMeshAndPivot() {
+    var mooonGeometry = new THREE.SphereGeometry( 2, 32, 32 )
+    var moonMaterial = new THREE.MeshPhongMaterial()
+    moonMaterial.map = loader.load('./public/assets/moonmap4k.jpg')
+    moonMesh = new THREE.Mesh( mooonGeometry, moonMaterial )
+    moonMesh.position.set(-25, 0, 0)
+
+    moonPivot = new THREE.Object3D()
+    scene.add(moonPivot)
+    moonPivot.add( moonMesh )
+}
+
+
 
 
 
@@ -138,9 +159,23 @@ var render = function() {
     // earthMesh.rotation.x += 0.005
     // earthMesh.rotation.y += 0.005
 
+    moonMesh.rotation.y += .005
+    moonPivot.rotation.y += .005
+
     earthMesh.rotation.x += controls.guiRotationX
     earthMesh.rotation.y += controls.guiRotationY
 
     renderer.render(scene, camera)
 }
 render()
+
+
+window.addEventListener( 'resize', onWindowResize, false );
+
+function onWindowResize(){
+
+    camera.aspect = window.innerWidth / window.innerHeight;
+    camera.updateProjectionMatrix();
+
+    renderer.setSize( window.innerWidth, window.innerHeight );
+}

@@ -33,7 +33,8 @@ Ok let's get started! Our HTML will be very simple. Notice we are loading Three.
 		</style>
 	</head>
 	<body>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/85/three.min.js"></script>			<script src="/path/to/script.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/85/three.min.js"></script>
+     	 	<script src="/path/to/script.js"></script>
 	</body>
 </html>
 ```
@@ -52,9 +53,9 @@ renderer.setSize(window.innerWidth, window.innerHeight)
 document.body.appendChild(renderer.domElement)
 ```
 
-First we create a new scene.  Next, we create a *camera*.  Three.js has a few camera options. For this example, we will use the **PerpectiveCamera**, which is designed to mimic the way the human eye sees (things get smaller the further away they are, amongst other things).  The PerspectiveCamera constructor is created as follows:
+First we create a new scene.  Next, we create a *camera*.  Three.js has a few camera options. For this example, we will use the **PerspectiveCamera**, which is designed to mimic the way the human eye sees (things get smaller the further away they are, amongst other things).  The PerspectiveCamera constructor is created as follows:
 
-`PerpectiveCamera(fov, aspect, near, far)`
+`PerspectiveCamera(fov, aspect, near, far)`
 
 These parameters make up the [viewing frustum](https://en.wikipedia.org/wiki/Viewing_frustum) of a camera. More info on this can be found in the [Three.js docs](https://threejs.org/docs/index.html#api/cameras/PerspectiveCamera).
 
@@ -187,10 +188,12 @@ We should now see a control box on the top right of our window. We can now contr
 
 # Exercises
 
-1. Create a new scene, along with its lights, cameras, and controls.  Then create 3 different types of meshes, each with a different geometry ([list here](https://threejs.org/docs/index.html)). Place the meshes at different coordinates so that they are all visible.  Experiment with different materials and skins.
-2. **Bonus:** Use the [TextGeometry](https://threejs.org/docs/index.html#api/geometries/TextGeometry) to add text to your 3D scene.  Don't forget to also create a material along with it to create your mesh.  The JSON file(s) you will need to load the fonts can be found [here](https://github.com/mrdoob/three.js/tree/dev/examples/fonts) (I've also added them to the `assets` directory of this repo to save you some time).
+1. Following along with this lecture, create a planet earth of your own and use OrbitControls to control your scene.
+2. Add a moon for our planet earth, as well as a planet mars, to our scene.  The materials for these meshes are included in the `assets` folder.  Place them at different coordinates within your scene.  Animate your scene so that the moon orbits around the earth.
+3. Use the [TextGeometry](https://threejs.org/docs/index.html#api/geometries/TextGeometry) to add text to your 3D scene.  Don't forget to also create a material along with it to create your mesh.  The JSON file(s) you will need to load the fonts can be found [here](https://github.com/mrdoob/three.js/tree/dev/examples/fonts) (I've also added them to the `assets` directory of this repo to save you some time).
 
 ## Additional References
 
 1. [Three.js Docs](https://threejs.org/docs/index.html)
 2. [How to check if WebGL is supported on your device and/or browser](https://threejs.org/docs/index.html#manual/introduction/WebGL-compatibility-check)
+3. [Planet textures](http://planetpixelemporium.com/)
