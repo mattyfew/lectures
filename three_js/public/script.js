@@ -9,27 +9,31 @@ Math.radians = function(degrees) {return degrees * Math.PI / 180;};
 
 // =========== TEXT =============
 
-var loader = new THREE.FontLoader();
+createText('Ginger')
+function createText(cohortName){
+    var loader = new THREE.FontLoader();
 
-loader.load( '/public/assets/fonts/optimer_regular.typeface.json', function ( font ) {
-    var textGeometry = new THREE.TextGeometry( 'Hello Ginger', {
-        font: font,
-        size: 6,
-        height: 3,
-        curveSegments: 10
-    });
-    var textMaterial = new THREE.MeshPhongMaterial( {
-        color: textColor,
-        emissive: 0x20202,
-        specular: 0x111111,
-        side: THREE.DoubleSide,
-        shading: THREE.FlatShading
-    });
-    textMesh = new THREE.Mesh( textGeometry, textMaterial );
-    textMesh.position.set(-23, 17, -15)
+    loader.load( '/public/assets/fonts/optimer_regular.typeface.json', function ( font ) {
+        var textGeometry = new THREE.TextGeometry( 'Hello ' + cohortName + '!', {
+            font: font,
+            size: 6,
+            height: 3,
+            curveSegments: 10
+        });
+        var textMaterial = new THREE.MeshPhongMaterial( {
+            color: textColor,
+            emissive: 0x20202,
+            specular: 0x111111,
+            side: THREE.DoubleSide,
+            shading: THREE.FlatShading
+        });
+        textMesh = new THREE.Mesh( textGeometry, textMaterial );
+        textMesh.position.set(-23, 17, -15)
 
-    scene.add(textMesh)
-})
+        scene.add(textMesh)
+    })
+}
+
 
 
 
@@ -95,6 +99,7 @@ scene.add( earthMesh )
 
 
 // =========== MOON MESH ==============
+
 createMoonMeshAndPivot()
 function createMoonMeshAndPivot() {
     var mooonGeometry = new THREE.SphereGeometry( 2, 32, 32 )
@@ -173,9 +178,7 @@ render()
 window.addEventListener( 'resize', onWindowResize, false );
 
 function onWindowResize(){
-
     camera.aspect = window.innerWidth / window.innerHeight;
     camera.updateProjectionMatrix();
-
     renderer.setSize( window.innerWidth, window.innerHeight );
 }
