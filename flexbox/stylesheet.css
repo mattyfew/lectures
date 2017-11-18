@@ -1,0 +1,137 @@
+body { margin: 0; }
+nav { background: #5B8182; color: white; }
+ul {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    min-height: 50px;
+}
+li { flex: 1 1 33%; text-align: center; font-size: 40px; }
+li:hover { background: black}
+
+
+
+
+
+
+
+
+
+.box { width: 200px; height: 200px; }
+
+#pink { background-color: pink }
+#blue { background-color: blue }
+#green { background-color: green }
+
+#red { background-color: red }
+#purple { background-color: purple }
+#brown { background-color: brown }
+
+#black { background-color: black }
+#teal { background-color: teal }
+#yellow { background-color: yellow }
+
+/*footer { margin-top: 50px; display: flex; background: green; flex-wrap: wrap;}
+footer img { max-height: 100px; width: auto; flex: 1 1 33%}*/
+
+
+
+
+
+
+
+
+
+
+/* basic flexbox with flex direction */
+/*main { display: flex; flex-direction: row;}*/
+/*main { display: flex; flex-direction: row-reverse; }*/
+
+
+
+
+/* flex-wrap */
+
+/* with fixed-width */
+/*main { width: 600px; display: flex; flex-wrap: wrap;}*/
+
+ /*without fixed-width */
+/*main { display: flex; flex-wrap: wrap-reverse;}*/
+
+
+
+
+/* flex-flow: direction + wrap */
+/* Apparently you can't wrap with column layout */
+/*main { display: flex; flex-flow: row wrap;}*/
+
+
+
+/* flex items - 3 boxes*/
+/*main { display: flex; flex-flow: row; }
+.flex1 { flex: 1 1; }
+.flex2 { flex: 1 2; }
+.flex3 { flex: 1 1; }*/
+
+
+
+/* flex grow & shrink - 3 boxes */
+/*main { display: flex; flex-flow: row; }
+.flex1 { flex: 1 5 300px; }
+.flex2 { flex: 5 1 300px; }
+.flex3 { flex: 1 5 300px; }*/
+
+
+/* Controlling alignment w/ justify-content and align-items */
+/*main {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: 800px;
+    justify-content: space-between;
+    align-items: flex-end;
+}*/
+
+
+
+
+/* align-content: how the lines of items should be spaced when wrapping is enabled */
+/*main {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: flex-end;
+    height: 800px;
+}*/
+
+
+
+
+/* order - 3 boxes*/
+/*main { display: flex; flex-flow: row; max-width: 800px}
+.flex1 { flex: 1 1 200px; order: 50 }
+.flex2 { flex: 1 1 200px; order: -1 }
+.flex3 { flex: 1 1 200px; order: 0 }*/
+
+
+
+
+
+/* flex-basis - 3 boxes*/
+/*main { display: flex; flex-flow: row; }
+.box { flex-basis: 25%; }
+.box { flex-basis: 300px; }*/
+
+
+
+
+/* align-self - 3 boxes, allows you to align a single flex item*/
+/*main {
+    display: flex;
+    max-width: 800px;
+    height: 800px;
+    align-items: flex-end;
+}*/
+/*.flex1 { align-self: stretch; height: auto}*/
