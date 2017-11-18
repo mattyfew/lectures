@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+    <head>
+        <meta charset="utf-8">
+        <title>Scope & Interpolation</title>
+    </head>
+    <body>
+
+        <div ng-controller="mainController">
+            {{name}}
+        </div>
+
+        <script src="https://code.angularjs.org/1.6.6/angular.js" charset="utf-8"></script>
+        <script type="text/javascript">
+            const myApp = angular.module('myApp', [])
+
+            myApp.controller('mainController', ($scope, $timeout) => {
+
+                $scope.name = 'Tony'
+
+                $timeout(() => $scope.name = 'Rara aha ha ha', 3000)
+            })
+        </script>
+
+    </body>
+</html>
