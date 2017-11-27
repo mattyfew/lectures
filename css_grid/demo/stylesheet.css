@@ -24,7 +24,7 @@
     display: grid;
 
     /* fractions */
-    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     /*grid-template-rows: 1fr 2fr 1fr 2fr;*/
 }
 
@@ -71,6 +71,26 @@
     grid-template-columns: 1fr 2fr 1fr;
     grid-template-rows: 2fr 1fr 1fr 5fr;
 }*/
-#container {
+/*#container {
     grid-template-columns: repeat(5, 1fr);
+}*/
+
+
+
+
+
+/* Gutters (gaps)
+===========================================*/
+/* gaps reduce the size of the cells, they don't "grow" the overall grid */
+
+#container {
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
 }
+
+
+
+
+
+/* Named Lines
+===========================================*/
