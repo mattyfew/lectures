@@ -1,0 +1,76 @@
+/*body { color: white; }*/
+
+.box {
+    padding: 1em;
+    color: white;
+    text-align: center;
+    text-shadow: 1px 1px 1px #000;
+}
+.blue { background-color: blue }
+.red { background-color: red }
+.green { background-color: green }
+.purple { background-color: purple }
+.pink { background-color: pink }
+.yellow { background-color: yellow }
+.teal { background-color: teal }
+.antiquewhite { background-color: antiquewhite }
+.crimson { background-color: crimson }
+.darkgoldenrod { background-color: darkgoldenrod }
+.darksalmon { background-color: darksalmon }
+.darkorange { background-color: darkorange }
+
+
+#container {
+    display: grid;
+
+    /* fractions */
+    grid-template-columns: 1fr 2fr 1fr;
+    /*grid-template-rows: 1fr 2fr 1fr 2fr;*/
+}
+
+
+/* Positioning cells
+===========================================*/
+.purple {
+    /* the numbers refer to the line # */
+    /* grid-column = grid-column-start / grid-column-end */
+    /* grid-row = grid-row-start / grid-row-end */
+
+    /* item will appear between column lines 2 & 3 */
+    /*grid-column: 2/3; */
+    /* item will appear between row lines 1 & 2 */
+    /*grid-row: 1/2;*/
+}
+
+/*.darkorange {
+    grid-column: 3/4;
+    grid-row: 5/6;
+}*/
+
+
+
+
+/* Make content span multiple cells
+===========================================*/
+/*.blue { grid-column: 1/4; }
+.red { grid-row: 2/5; }*/
+
+/* use span to tell the item how many grid elements it should span to
+    adding more items when you don't have enough rows, the browser will create those columns */
+/*.purple { grid-column: 1/ span 2}*/
+
+
+
+
+
+/* Using fr
+===========================================*/
+
+/*#container { grid-template-columns: 30px 2fr 1fr 4fr 1fr }*/
+/*#container {
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: 2fr 1fr 1fr 5fr;
+}*/
+#container {
+    grid-template-columns: repeat(5, 1fr);
+}

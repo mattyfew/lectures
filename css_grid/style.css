@@ -1,0 +1,45 @@
+/* =============== Exercise #1 ======================= */
+/*
+
+body {
+    display: grid;
+    min-height: 100vh;
+    margin: 0;
+
+    grid-template-rows: 70px 1fr 20px;
+}
+
+header { background-color: orange; height: auto }
+
+main { background-color: purple; height: auto }
+
+footer { background-color: blue; height: auto }
+*/
+
+/*=============== Exercise #2 =======================*/
+
+#box-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 10px;
+}
+
+#box-1 { background-color: grey; }
+#box-2 { background-color: black; }
+#box-3 { background-color: blue; }
+#box-4 { background-color: purple; }
+
+.box {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    height: 200px;
+    width: 200px;
+}
+
+.small-box { width: 100px; height: 100px; }
+
+#inner-box-1 { background-color: orange; grid-row: 1; grid-column: 2; }
+#inner-box-2 { background-color: yellow; grid-row: 2; grid-column: 2; }
+#inner-box-3 { background-color: green; grid-row: 2; grid-column: 1; }
+#inner-box-4 { background-color: pink; grid-row: 1; grid-column: 1; }
